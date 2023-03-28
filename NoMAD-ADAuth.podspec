@@ -25,7 +25,7 @@ DESC
   s.authors      = { "Josh Wisenbaker" => "josh@orchardandgrove.com", "Joel Rennich" => "joel@orchardandgrove.com" }
   s.platform     = :osx, "10.10"
   s.source       = { :git => "https://gitlab.com/Mactroll/NoMAD-ADAuth", :tag => "#{s.version}" }
-  s.source_files  = "NoMAD-ADAuth", "NoMAD-ADAuth/**/*.{h,m}"
+  s.source_files  = "NoMAD-ADAuth", "NoMAD-ADAuth/ObjC/**/*.{h,m}"
   s.exclude_files = "docs"
 
   # s.public_header_files = "Classes/**/*.h"

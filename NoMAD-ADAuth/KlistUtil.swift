@@ -73,8 +73,7 @@ public class KlistUtil {
     public func returnDefaultExpiration() -> Date? {
         return defaultExpires
     }
-
-    /// Note this will kill any pre-existing tickets for this user.
+    
     public func klist() {
         
         let sema = DispatchSemaphore(value: 0)
@@ -171,15 +170,9 @@ public class KlistUtil {
                 tickets[tick.value.principal] = tick.value
             }
         }
+        //print(tickets)
     }
-
-    public func hasTickets(principal: String) -> Bool {
-        klist()
-        return tickets.keys
-            .map { $0.lowercased() }
-            .contains(principal.lowercased())
-    }
-
+    
     // function to delete a kerb ticket
     
     public func kdestroy(princ: String = "" ) {
